@@ -5,156 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HPE Private Lounge</title>
     <link rel="icon" type="image/x-icon" href="img/logo.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <nav class="navbar fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand logo-container" href="#">
+            <a class="logo-container" href="#">
                 <img src="img/logo.png" alt="HPE Logo" class="hpe-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#incentive">Incentive</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Vorteile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+            <div class="d-flex justify-content-end">
+                <ul class="nav-menu">
+                    <li><a href="#about">Vorteile</a></li>
+                    <li><a href="#incentive">Incentive</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Header Section -->
-    <section id="header" class="header-section d-flex align-items-center">
-        <div class="header-overlay"></div>
+    <section class="header">
+        <div class="overlay"></div>
         <div class="container text-center">
-            <h1 class="display-3 fw-bold mb-4">Willkommen zur HPE Private Lounge – Exklusive Vorteile für unsere Partner</h1>
-            <h3 class="lead mb-5">Sichern Sie sich Tank- und Wunschgutscheine und gewinnen Sie einen spektakulären Aktivurlaub für 2</h3>
-            <a href="https://www.also.com/ec/cms5/de_1010/1010/informationen/promotions/hpe-2021-q4-hpe-private-lounge/hpe_2021_q4_hpe_private_lounge_webform.jsp" class="btn btn-primary btn-lg">Jetzt registrieren</a>
+            <h1 class="header-title">Willkommen zur HPE Private Lounge – Exklusive Vorteile für unsere Partner</h1>
+            <h3 class="header-subtitle">Sichern Sie sich Tank- und Wunschgutscheine und gewinnen Sie einen spektakulären Aktivurlaub für 2</h3>
         </div>
     </section>
 
     <!-- Banner Section -->
-    <section id="banner" class="banner-section py-5" style="background-color: #000000;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="banner-title mb-3 fw-bold">HPE Private Lounge</h2>
-                    <p class="banner-lead lead mb-4">Gewinnen Sie einen unvergesslichen Aktivurlaub, sowie Tank- und Wunschgutscheine</p>
-                    <div class="row justify-content-center">
-                        <div class="col-lg-10">
-                            <p class="banner-text">Entdecken Sie exklusive Vorteile und maßgeschneiderte Angebote unseres HPE Private Lounge Programms. Werden Sie Teil eines exklusiven Clubs, der speziell darauf ausgerichtet ist, Ihr Hewlett Packard Enterprise & HPE Aruba Networking Geschäftswachstum zu fördern und Ihre Erfahrungen mit unseren führenden Produkten zu bereichern.</p>
-                        </div>
-                    </div>
+    <section class="banner">
+        <div class="container text-center">
+            <h2 class="banner-title">HPE Private Lounge</h2>
+            <p class="banner-lead">Gewinnen Sie einen unvergesslichen Aktivurlaub, sowie Tank- und Wunschgutscheine</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <p class="banner-text">Entdecken Sie exklusive Vorteile und maßgeschneiderte Angebote unseres HPE Private Lounge Programms. Werden Sie Teil eines exklusiven Clubs, der speziell darauf ausgerichtet ist, Ihr Hewlett Packard Enterprise & HPE Aruba Networking Geschäftswachstum zu fördern und Ihre Erfahrungen mit unseren führenden Produkten zu bereichern.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-5 bg-light">
+    <section id="about" class="section-light">
         <div class="container">
-            <div class="row">
-                <div class="col-12 mb-5">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body p-4 p-md-5">
-                            <h3 class="mt-4 mb-3 text-hpe-green">Exklusive Angebote erwarten Sie!</h3>
-                            <p>Nutzen Sie unsere speziellen Produktangebote und sichern Sie sich nicht nur Tank- und Wunschgutscheine, sondern auch die Chance auf einen unvergesslichen Aktivurlaub.</p>
-                            <p>Als Mitglied des Private Lounge Clubs profitieren Sie zusätzlich von hohen Punkten des ALSO Bonus Clubs, die Sie in unserem Prämienshop einlösen können. Neben den Standardpunkten, welche wir quartalsweise auf unsere HPE-Produkte vergeben, erhalten unsere Private Lounge Members zusätzliche Punkte, die nur für Mitglieder einsehbar sind.</p>
-                            <p class="fw-bold">Erleben Sie, wie Ihre Investitionen in führende HPE-Technologien Sie nicht nur technologisch voranbringen, sondern auch mit einzigartigen Erlebnissen belohnen!</p>
-                            
-                            <div class="mt-4 text-center">
-                                <a href="https://www.also.com/ec/cms5/de_1010/1010/informationen/bonus-club/index.jsp" class="btn btn-outline-success me-3 mb-2" style="color: #01A982; border-color: #01A982;" target="_blank">
-                                    <i class="fas fa-award me-2"></i>ALSO Bonus Club
-                                </a>
-                                <a href="https://www.also-bonusclub.de/users/sign_in" class="btn btn-outline-success mb-2" style="color: #01A982; border-color: #01A982;" target="_blank">
-                                    <i class="fas fa-gift me-2"></i>Prämienshop
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="card-content">
+                <h3 class="section-title">Exklusive Angebote erwarten Sie!</h3>
+                <p>Nutzen Sie unsere speziellen Produktangebote und sichern Sie sich nicht nur Tank- und Wunschgutscheine, sondern auch die Chance auf einen unvergesslichen Aktivurlaub.</p>
+                <p>Als Mitglied des Private Lounge Clubs profitieren Sie zusätzlich von hohen Punkten des ALSO Bonus Clubs, die Sie in unserem Prämienshop einlösen können. Neben den Standardpunkten, welche wir quartalsweise auf unsere HPE-Produkte vergeben, erhalten unsere Private Lounge Members zusätzliche Punkte, die nur für Mitglieder einsehbar sind.</p>
+                <p class="text-bold">Erleben Sie, wie Ihre Investitionen in führende HPE-Technologien Sie nicht nur technologisch voranbringen, sondern auch mit einzigartigen Erlebnissen belohnen!</p>
+                
+                <div class="action-buttons">
+                    <a href="https://www.also.com/ec/cms5/de_1010/1010/informationen/bonus-club/index.jsp" class="btn-outline" target="_blank">
+                        <i class="fas fa-award icon-space"></i>ALSO Bonus Club
+                    </a>
+                    <a href="https://www.also-bonusclub.de/users/sign_in" class="btn-outline" target="_blank">
+                        <i class="fas fa-gift icon-space"></i>Prämienshop
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Incentive Section -->
-    <section id="incentive" class="py-5">
+    <section id="incentive" class="section">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2>Das Incentive</h2>
-                    <p class="lead"><strong>Aktionszeitraum: 1. August bis 15. Oktober 2024</strong></p>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Das Incentive</h2>
+                <p class="section-subtitle"><strong>Aktionszeitraum: 1. August bis 15. Oktober 2024</strong></p>
             </div>
+            
             <div class="row g-4">
+                <!-- Incentive Cards -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="img/hpe_smart_choice.png" alt="HPE Smart Choice" class="img-fluid" style="height: 80px; object-fit: contain;">
-                            </div>
-                            <h3 class="card-title">HPE Smart Choice</h3>
-                            <p class="card-text">Erhalten Sie Tankgutscheine im Wert von 15 € für jedes gekaufte Gerät aus der HPE Smart Choice Produktreihe. Pro Kunde werden maximal 2 Gutscheine ausgegeben.</p>
-                            <a href="https://www.also.com/ec/cms5/1010/en_DE/search.jsps?q=HPE%20Smart%20Choice%20Server" class="btn btn-outline-primary mt-3" target="_blank">Produkte im ALSO-Shop</a>
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="img/hpe_smart_choice.png" alt="HPE Smart Choice">
                         </div>
+                        <h3 class="product-title">HPE Smart Choice</h3>
+                        <p>Erhalten Sie Tankgutscheine im Wert von 15 € für
+                            jedes gekaufte Gerät aus der HPE Smart Choice Produktreihe. Pro Kunde
+                            werden maximal 2 Gutscheine ausgegeben. Insgesamt stehen 100
+                            Gutscheine zur Verfügung.
+                            </p>
+                        <a href="https://www.also.com/ec/cms5/1010/en_DE/search.jsps?q=HPE%20Smart%20Choice%20Server" class="btn-outline" target="_blank">Produkte im ALSO-Shop</a>
                     </div>
                 </div>
+                
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="img/msa_storage.png" alt="HPE MSA Storage" class="img-fluid" style="height: 80px; object-fit: contain;">
-                            </div>
-                            <h3 class="card-title">HPE MSA Storage</h3>
-                            <p class="card-text">Für jeden Kauf eines HPE MSA Storage Geräts erhalten Sie einen Wunschgutschein im Wert von 15 €. Pro Kunde können maximal 2 Gutscheine beansprucht werden.</p>
-                            <a href="https://www.also.com/ec/cms5/1010/de_DE/search.jsps?q=HPE%20MSA%20Storage" class="btn btn-outline-primary mt-3" target="_blank">Produkte im ALSO-Shop</a>
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="img/msa_storage.png" alt="HPE MSA Storage">
                         </div>
+                        <h3 class="product-title">HPE MSA Storage</h3>
+                        <p>Für jeden Kauf, der im Folgenden aufgeführten HPE
+                            MSA Storage Geräte, erhalten Sie einen Wunschgutschein im Wert von 15
+                            €. Pro Kunde können maximal 2 Gutscheine beansprucht werden.
+                            Insgesamt stehen 100 Gutscheine zur Verfügung.
+                            </p>
+                        <a href="https://www.also.com/ec/cms5/1010/de_DE/search.jsps?q=HPE%20MSA%20Storage" class="btn-outline" target="_blank">Produkte im ALSO-Shop</a>
                     </div>
                 </div>
+                
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="img/networking_instant_on_access_points.png" alt="Access Points" class="img-fluid" style="height: 80px; object-fit: contain;">
-                            </div>
-                            <h3 class="card-title">HPE Networking Access Points</h3>
-                            <p class="card-text">Erhalten Sie Tankgutscheine im Wert von 15 € für jeden Kauf eines HPE Networking Instant On Access Points. Pro Kunde maximal 2 Gutscheine.</p>
-                            <a href="https://www.also.com/ec/cms5/1010/search.do?q=HPE%20Networking%20Instant%20On%20Access%20Points" class="btn btn-outline-primary mt-3" target="_blank">Produkte im ALSO-Shop</a>
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="img/networking_instant_on_access_points.png" alt="Access Points">
                         </div>
+                        <h3 class="product-title">HPE Networking Instant On Access Points</h3>
+                        <p>Erhalten Sie Tankgutscheine
+                            im Wert von 15 € für jeden Kauf eines der im Folgenden aufgeführten HPE
+                            Networking Instant On Access Points. Pro Kunde können maximal 2
+                            Gutscheine vergeben werden. Insgesamt stehen 70 Gutscheine zur
+                            Verfügung.</p>
+                        <a href="https://www.also.com/ec/cms5/1010/search.do?q=HPE%20Networking%20Instant%20On%20Access%20Points" class="btn-outline" target="_blank">Produkte im ALSO-Shop</a>
                     </div>
                 </div>
+                
                 <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body text-center p-4">
-                            <div class="icon-wrapper mb-3">
-                                <img src="img/networking_instant_on.png" alt="Switches" class="img-fluid" style="height: 80px; object-fit: contain;">
-                            </div>
-                            <h3 class="card-title">HPE Networking Switches</h3>
-                            <p class="card-text">Für jedes gekaufte HPE Networking Instant On Switch können Sie einen Wunschgutschein im Wert von 15 € erhalten. Pro Kunde maximal 2 Gutscheine.</p>
-                            <a href="https://www.also.com/ec/cms5/1010/search.do?q=HPE%20Networking%20Instant%20On%20Switches" class="btn btn-outline-primary mt-3" target="_blank">Produkte im ALSO-Shop</a>
+                    <div class="product-card">
+                        <div class="product-icon">
+                            <img src="img/networking_instant_on.png" alt="Switches">
                         </div>
+                        <h3 class="product-title">HPE Networking Instant On Switches</h3>
+                        <p>Für jedes gekaufte Gerät, der
+                            unter den u.g. Link aufgeführten HPE Networking Instant On Switches,
+                            können Sie einen Wunschgutschein im Wert von 15 € erhalten. Pro Kunde
+                            können max. 2 Gutscheine beansprucht werden. Insgesamt vergeben wir
+                            70 Gutscheine.</p>
+                        <a href="https://www.also.com/ec/cms5/1010/search.do?q=HPE%20Networking%20Instant%20On%20Switches" class="btn-outline" target="_blank">Produkte im ALSO-Shop</a>
                     </div>
                 </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-12">
-                    <div class="card border-0 shadow-sm">
-                        <div class="cta-section position-relative overflow-hidden" style="background-image: url('img/AdobeStock_591468629.jpeg'); background-size: cover; background-position: center; min-height: 350px;">
-                            <div class="cta-overlay position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.7);"></div>
-                            <div class="card-body p-4 p-lg-5 text-center position-relative" style="z-index: 2;">
-                                <div class="py-4 text-white">
-                                    <h3 class="mb-3 text-white">Steigern Sie Ihre Gewinnchancen</h3>
-                                    <p class="lead mb-4">Melden Sie sich noch heute an. Bereits registrierte Mitglieder nehmen automatisch am Incentive teil.</p>
-                                    <a href="https://www.also.com/ec/cms5/de_1010/1010/informationen/promotions/hpe-2021-q4-hpe-private-lounge/hpe_2021_q4_hpe_private_lounge_webform.jsp" class="btn btn-primary btn-lg">Jetzt registrieren</a>
-                                </div>
-                            </div>
-                        </div>
+            
+            <div class="mt-5">
+                <div class="cta-card">
+                    <div class="overlay"></div>
+                    <div class="cta-content">
+                        <h3>Steigern Sie Ihre Gewinnchancen</h3>
+                        <p class="cta-text">Mit jedem Kauf eines HPE Smart Choice, HPE MSA Storage oder HPE Networking Instant On sammeln Sie Lose für eine exklusive Verlosung. Pro Kauf eines der
+                            aufgeführten Geräte (separiert in HPE & HPE Networking Instant On) erhalten Sie ein Los. Gewinnen Sie einen unvergesslichen Aktivurlaub im Wert von
+                            199,90 €. Je mehr Sie kaufen, desto höher Ihre Gewinnchancen!"</p>
+                        <p class="cta-text">Melden Sie sich noch heute an. Bereits registrierte Mitglieder nehmen automatisch am Incentive teil.</p>
+                        <a href="https://www.also.com/ec/cms5/de_1010/1010/informationen/promotions/hpe-2021-q4-hpe-private-lounge/hpe_2021_q4_hpe_private_lounge_webform.jsp" class="btn-hpe">Jetzt registrieren</a>
                     </div>
                 </div>
             </div>
@@ -162,36 +157,31 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light">
+    <section id="contact" class="section-light">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-5">
-                    <h2>Kontakt</h2>
-                    <p class="lead">Für weitere Informationen oder bei Fragen wenden Sie sich bitte an unser Vertriebsteam</p>
-                </div>
+            <div class="text-center mb-5">
+                <h2 class="section-title">Kontakt</h2>
+                <p class="section-subtitle">Für weitere Informationen oder bei Fragen wenden Sie sich bitte an unser Vertriebsteam</p>
             </div>
+            
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <div class="row justify-content-center">
-                                <div class="col-md-8">
-                                    <p class="mb-3 text-center">
-                                        <i class="fas fa-envelope text-primary me-2"></i> 
-                                        <a href="mailto:hpe-solutions-de@also.com">hpe-solutions-de@also.com</a>
-                                    </p>
-                                    <p class="mb-3 text-center">
-                                        <i class="fas fa-phone text-primary me-2"></i> 
-                                        <a href="tel:+492921995445">+49 2921 99-54 45</a>
-                                    </p>
-                                    <div class="alert alert-info mt-4">
-                                        <ul class="mb-0 ps-3">
-                                            <li>Bereits registrierte Kunden müssen sich nicht erneut registrieren und nehmen automatisch am Incentive teil.</li>
-                                            <li>Gültig solange der Vorrat reicht.</li>
-                                            <li>Wir müssen Sie darauf hinweisen, dass Sie Ihre Gewinne versteuern müssen.</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <div class="contact-card">
+                        <div class="contact-info">
+                            <p class="contact-item">
+                                <i class="fas fa-envelope icon-green"></i> 
+                                <a href="mailto:hpe-solutions-de@also.com">hpe-solutions-de@also.com</a>
+                            </p>
+                            <p class="contact-item">
+                                <i class="fas fa-phone icon-green"></i> 
+                                <a href="tel:+492921995445">+49 2921 99-54 45</a>
+                            </p>
+                            <div class="info-alert">
+                                <ul>
+                                    <li>Bereits registrierte Kunden müssen sich nicht erneut registrieren und nehmen automatisch am Incentive teil.</li>
+                                    <li>Gültig solange der Vorrat reicht.</li>
+                                    <li>Wir müssen Sie darauf hinweisen, dass Sie Ihre Gewinne versteuern müssen.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -199,7 +189,8 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,35 +1,25 @@
-/* Variables - Simplified Color Palette */
+/* Variables */
 :root {
-  /* Colors */
   --hpe-green: #01A982;
-  --hpe-secondary: #425563;
-  --text-primary: #333333;
-  --bg-light: #f5f5f5;
-  --white: #ffffff;
-  --black: #000000;
   --hpe-green-dark: #018c6c;
+  --hpe-green-darker: #016e54;
+  --hpe-secondary: #425563;
+  --hpe-light-bg: #f0f9f7;
+  --hpe-border: #d0e6e2;
+  --text-primary: #333;
+  --bg-light: #f5f5f5;
+  --white: #fff;
+  --black: #000;
 }
 
 /* Base Styles */
-body {
-  color: var(--text-primary);
-  background-color: var(--bg-light);
-  padding-top: 0;
-}
+body {color: var(--text-primary); background-color: var(--bg-light)}
+section, .section, .section-light {padding: 60px 0}
+.section-light {background-color: var(--bg-light)}
+.container {padding-left: 2.5%; padding-right: 2.5%}
 
-section {
-  padding: 60px 0;
-}
-
-h2, h3, h4 {
-  color: var(--hpe-secondary);
-}
-
-h2 {
-  position: relative;
-  padding-bottom: 15px;
-}
-
+h2, h3, h4 {color: var(--hpe-secondary)}
+h2 {position: relative; padding-bottom: 15px}
 h2:after {
   content: '';
   position: absolute;
@@ -42,20 +32,56 @@ h2:after {
 }
 
 /* Utility Classes */
-.text-hpe-green {
-  color: var(--hpe-green) !important;
+.section-title {color: var(--hpe-secondary); margin-bottom: 1rem; font-weight: 600}
+.section-subtitle {font-size: 1.2rem; margin-bottom: 2rem}
+.text-bold {font-weight: 700}
+.text-primary, .text-hpe-green, .icon-green {color: var(--hpe-green) !important}
+.icon-space, .icon-green {margin-right: 0.5rem}
+
+/* Links & Buttons */
+a {color: var(--hpe-green)}
+a:hover, a:focus {color: var(--hpe-green-dark); text-decoration: none}
+
+.btn-primary, .btn-success, .btn-hpe,
+.btn-outline, .btn-outline-primary, .btn-outline-success {
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  transition: all 0.3s;
+  text-decoration: none;
 }
 
-/* Links */
-a {
+.btn-primary, .btn-success, .btn-hpe {
+  background-color: var(--hpe-green-darker);
+  border-color: var(--hpe-green-darker);
+  color: var(--white);
+}
+
+.btn-outline, .btn-outline-primary, .btn-outline-success {
+  background-color: transparent;
+  border: 2px solid var(--hpe-green);
   color: var(--hpe-green);
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
 }
 
-a:hover, a:focus {
-  color: var(--hpe-green-dark);
+.btn-primary:hover, .btn-success:hover, .btn-hpe:hover,
+.btn-primary:focus, .btn-success:focus, .btn-hpe:focus {
+  background-color: var(--hpe-green-dark);
+  border-color: var(--hpe-green-dark);
+  color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Navbar */
+.btn-outline:hover, .btn-outline-primary:hover, .btn-outline-success:hover {
+  background-color: var(--hpe-green);
+  color: var(--white);
+}
+
+.btn:focus {box-shadow: 0 0 0 0.25rem rgba(1, 169, 130, 0.25)}
+.action-buttons {margin-top: 2rem; text-align: center}
+
+/* Navigation */
 .navbar {
   position: fixed;
   top: 0;
@@ -63,10 +89,10 @@ a:hover, a:focus {
   width: 100%;
   min-height: 70px;
   background-color: var(--white) !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding: 0;
-  z-index: 1000;
   transition: all 0.3s;
+  z-index: 1000;
 }
 
 .navbar.scrolled {
@@ -74,7 +100,6 @@ a:hover, a:focus {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo */
 .logo-container {
   display: flex;
   align-items: center;
@@ -84,9 +109,7 @@ a:hover, a:focus {
   transition: all 0.3s;
 }
 
-.navbar.scrolled .logo-container {
-  height: 60px;
-}
+.navbar.scrolled .logo-container {height: 60px}
 
 .hpe-logo {
   max-height: 130px;
@@ -99,57 +122,44 @@ a:hover, a:focus {
   transition: all 0.3s;
 }
 
-.navbar.scrolled .hpe-logo {
-  max-height: 110px;
+.navbar.scrolled .hpe-logo {max-height: 110px}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
-/* Navbar Links */
-.navbar-light .navbar-nav .nav-link {
+.nav-menu li {margin-left: 0.5rem}
+
+.nav-menu li a, .navbar-nav .nav-link {
   color: var(--text-primary) !important;
   font-weight: 500;
   padding: 8px 15px;
   border-radius: 4px;
+  text-decoration: none;
   transition: all 0.3s;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+.nav-menu li a:hover, .navbar-nav .nav-link:hover {
   color: var(--hpe-green) !important;
   background-color: rgba(1, 169, 130, 0.05);
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-  color: var(--hpe-green) !important;
-  font-weight: 600;
-}
-
-.navbar.scrolled .navbar-nav .nav-link {
-  padding: 6px 12px;
-  font-size: 0.95rem;
-}
-
-.navbar-toggler {
-  border: none;
-  padding: 0.5rem;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-  outline: none;
-}
-
-/* Header Section */
-.header-section {
+/* Header */
+.header {
   position: relative;
   height: 100vh;
   background-image: url('img/AdobeStock_837392130.jpeg');
   background-size: cover;
   background-position: center;
   color: var(--white);
-  padding: 0;
-  margin-top: 0;
+  display: flex;
+  align-items: center;
 }
 
-.header-overlay {
+.header .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -159,37 +169,32 @@ a:hover, a:focus {
   z-index: 1;
 }
 
-.header-section .container {
+.header .container {
   position: relative;
   z-index: 2;
   padding: 0 7.5%;
+  text-align: center;
 }
 
-.header-section h1 {
+.header-title {
   font-size: 3rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem;
   max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.header-section h1:after {
-  display: none;
-}
-
-.header-section h3 {
+.header-subtitle {
   font-size: 1.3rem;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--white);
+  color: white;
 }
 
-/* Banner Section Styling */
-.banner-section {
-  position: relative;
+/* Banner */
+.banner {
   background-color: var(--black);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 3rem 0;
+  color: var(--white);
 }
 
 .banner-title {
@@ -198,101 +203,96 @@ a:hover, a:focus {
   color: var(--hpe-green);
 }
 
-.banner-lead, .banner-text {
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--white);
-}
-
-.banner-lead {
-  font-size: 1.25rem;
-  max-width: 800px;
-}
-
-.banner-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 900px;
-}
-
-/* Buttons */
-.btn-primary, .btn-success {
-  background-color: var(--hpe-green) !important;
-  border-color: var(--hpe-green) !important;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
-.btn-success:hover, .btn-success:focus, .btn-success:active {
-  background-color: var(--hpe-green-dark) !important;
-  border-color: var(--hpe-green-dark) !important;
-}
-
-.btn-outline-primary, .btn-outline-success {
-  color: var(--hpe-green) !important;
-  border-color: var(--hpe-green) !important;
-}
-
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active,
-.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active {
-  background-color: var(--hpe-green) !important;
-  color: var(--white) !important;
-}
-
-.btn:focus, .btn.focus {
-  box-shadow: 0 0 0 0.25rem rgba(1, 169, 130, 0.25) !important;
-}
+.banner-lead, .banner-text {margin-left: auto; margin-right: auto}
+.banner-lead {font-size: 1.25rem; max-width: 800px}
+.banner-text {font-size: 1.1rem; line-height: 1.6; max-width: 900px}
 
 /* Cards */
-.card {
+.card, .card-content, .contact-card, .product-card {
+  background: var(--white);
   border: none;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
+.card:hover, .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.card-title {
+.card-content, .contact-card {padding: 2rem; margin-bottom: 2rem}
+.product-card {padding: 1.5rem; height: 100%; text-align: center}
+.product-card p {text-align: justify; margin-bottom: 1.5rem}
+
+.card-title, .product-title {
   color: var(--hpe-green);
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-/* Alerts */
-.alert-info {
-  background-color: rgba(1, 169, 130, 0.05);
-  border-color: rgba(1, 169, 130, 0.2);
-  color: var(--hpe-green-dark);
+.product-icon {margin-bottom: 1rem}
+.product-icon img {height: 80px; object-fit: contain}
+
+/* Contact */
+.contact-info {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
 }
+
+.contact-item {margin-bottom: 1rem}
+
+.info-alert, .alert-info {
+  background-color: var(--hpe-light-bg);
+  border: 1px solid var(--hpe-border);
+  color: var(--hpe-text-dark);
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.info-alert ul {margin-bottom: 0; padding-left: 1.5rem}
+
+/* CTA Section */
+.cta-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: url('img/AdobeStock_591468629.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 350px;
+}
+
+.cta-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+
+.cta-content h3 {color: white}
+.cta-text {font-size: 1.2rem; margin-bottom: 1.5rem}
 
 /* Media Queries */
 @media (max-width: 992px) {
-  /* Navbar */
-  .navbar {
-    min-height: 65px;
-  }
-  
-  .navbar.scrolled {
-    min-height: 55px;
-  }
-  
-  .logo-container {
-    height: 65px;
-  }
-  
-  .navbar.scrolled .logo-container {
-    height: 55px;
-  }
-  
-  .hpe-logo {
-    max-height: 120px;
-    max-width: 340px;
-  }
-  
-  .navbar.scrolled .hpe-logo {
-    max-height: 100px;
-  }
+  .navbar, .logo-container {min-height: 65px}
+  .navbar.scrolled {min-height: 55px}
+  .navbar.scrolled .logo-container {height: 55px}
+  .hpe-logo {max-height: 120px; max-width: 340px}
+  .navbar.scrolled .hpe-logo {max-height: 100px}
   
   .navbar-collapse {
     background-color: var(--white);
@@ -306,87 +306,30 @@ a:hover, a:focus {
     z-index: 1000;
   }
   
-  .brand-text {
-    font-size: 1.2rem;
-  }
-  
-  .navbar.scrolled .brand-text {
-    font-size: 1.1rem;
-  }
-  
-  /* Header Section */
-  .header-section .container {
-    padding: 0 5%;
-  }
-  
-  .header-section h1 {
-    font-size: 2.5rem;
-  }
+  .header .container {padding: 0 5%}
+  .header-title {font-size: 2.5rem}
 }
 
 @media (max-width: 768px) {
-  /* General */
-  section {
-    padding: 40px 0;
-  }
+  section, .section, .section-light {padding: 40px 0}
   
-  /* Navbar */
-  .navbar {
-    min-height: 60px;
-  }
+  .navbar, .logo-container {min-height: 60px}
+  .navbar.scrolled, .navbar.scrolled .logo-container {min-height: 50px}
+  .hpe-logo {max-height: 100px; max-width: 280px}
+  .navbar.scrolled .hpe-logo {max-height: 85px}
   
-  .navbar.scrolled {
-    min-height: 50px;
-  }
+  .nav-menu {display: flex; flex-direction: row; align-items: center}
+  .nav-menu li a {padding: 6px 8px; font-size: 0.9rem}
   
-  .logo-container {
-    height: 60px;
-  }
+  .header .container {padding: 0 2.5%}
+  .header-title {font-size: 2rem}
+  .header-subtitle {font-size: 1.1rem}
   
-  .navbar.scrolled .logo-container {
-    height: 50px;
-  }
-  
-  .hpe-logo {
-    max-height: 100px;
-    max-width: 280px;
-  }
-  
-  .navbar.scrolled .hpe-logo {
-    max-height: 85px;
-  }
-  
-  .brand-text {
-    font-size: 1rem;
-  }
-  
-  .navbar.scrolled .brand-text {
-    font-size: 0.9rem;
-  }
-  
-  /* Header Section */
-  .header-section .container {
-    padding: 0 2.5%;
-  }
-  
-  .header-section h1 {
-    font-size: 2rem;
-  }
-  
-  .header-section h3 {
-    font-size: 1.1rem;
-  }
-  
-  /* Banner Section */
-  .banner-title {
-    font-size: 2rem;
-  }
-  
-  .banner-lead {
-    font-size: 1.15rem;
-  }
-  
-  .banner-text {
-    font-size: 1rem;
-  }
+  .banner-title {font-size: 2rem}
+  .banner-lead {font-size: 1.15rem}
+  .banner-text {font-size: 1rem}
+}
+
+@media (max-width: 576px) {
+  .nav-menu li a {padding: 4px 6px; font-size: 0.8rem}
 }

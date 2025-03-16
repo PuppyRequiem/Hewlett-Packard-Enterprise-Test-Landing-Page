@@ -10,9 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     
-    // Scroll event listener
+    // Set initial navbar state and add scroll listener
     window.addEventListener('scroll', handleScroll);
-    
     handleScroll();
 
     // Smooth scroll for anchor links
@@ -29,20 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Mobile navbar
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    
-    if (navbarToggler && navbarCollapse) {
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-                    navbarToggler.click();
-                }
-            });
-        });
-    }
 });
