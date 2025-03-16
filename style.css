@@ -1,17 +1,19 @@
-/* Variables */
+/* Variables - Simplified Color Palette */
 :root {
+  /* Colors */
   --hpe-green: #01A982;
-  --hpe-green-dark: #018c6c;
   --hpe-secondary: #425563;
-  --hpe-light-bg: #f0f9f7;
-  --hpe-border: #d0e6e2;
-  --hpe-text-dark: #01705a;
+  --text-primary: #333333;
+  --bg-light: #f5f5f5;
+  --white: #ffffff;
+  --black: #000000;
+  --hpe-green-dark: #018c6c;
 }
 
 /* Base Styles */
 body {
-  color: #333;
-  background-color: #f5f5f5;
+  color: var(--text-primary);
+  background-color: var(--bg-light);
   padding-top: 0;
 }
 
@@ -39,8 +41,8 @@ h2:after {
   background-color: var(--hpe-green);
 }
 
-/* Colors & Text Utilities */
-.text-primary, .text-hpe-green {
+/* Utility Classes */
+.text-hpe-green {
   color: var(--hpe-green) !important;
 }
 
@@ -53,92 +55,6 @@ a:hover, a:focus {
   color: var(--hpe-green-dark);
 }
 
-/* Buttons */
-.btn-primary, .btn-success {
-  background-color: var(--hpe-green) !important;
-  border-color: var(--hpe-green) !important;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
-.btn-success:hover, .btn-success:focus, .btn-success:active {
-  background-color: var(--hpe-green-dark) !important;
-  border-color: var(--hpe-green-dark) !important;
-}
-
-.btn-outline-primary, .btn-outline-success {
-  color: var(--hpe-green) !important;
-  border-color: var(--hpe-green) !important;
-}
-
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active,
-.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active {
-  background-color: var(--hpe-green) !important;
-  color: white !important;
-}
-
-.btn:focus, .btn.focus {
-  box-shadow: 0 0 0 0.25rem rgba(1, 169, 130, 0.25) !important;
-}
-
-/* Cards */
-.card {
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-  color: var(--hpe-green);
-  font-weight: 600;
-}
-
-/* Alerts */
-.alert-info {
-  background-color: var(--hpe-light-bg);
-  border-color: var(--hpe-border);
-  color: var(--hpe-text-dark);
-}
-
-/* Banner */
-#banner {
-  background-color: var(--hpe-secondary);
-}
-
-/* Banner Section Styling */
-.banner-section {
-  position: relative;
-  background-color: #000000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.banner-title {
-  font-size: 2.5rem;
-  letter-spacing: -0.5px;
-  color: var(--hpe-green);
-}
-
-.banner-lead, .banner-text {
-  margin-left: auto;
-  margin-right: auto;
-  color: #fff;
-}
-
-.banner-lead {
-  font-size: 1.25rem;
-  max-width: 800px;
-}
-
-.banner-text {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  max-width: 900px;
-}
-
 /* Navbar */
 .navbar {
   position: fixed;
@@ -146,8 +62,8 @@ a:hover, a:focus {
   left: 0;
   width: 100%;
   min-height: 70px;
-  background-color: #fff !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: var(--white) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0;
   z-index: 1000;
   transition: all 0.3s;
@@ -187,29 +103,9 @@ a:hover, a:focus {
   max-height: 110px;
 }
 
-/* Navbar Brand & Links */
-.navbar-brand {
-  color: #333 !important;
-  font-weight: 600;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.brand-text {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--hpe-green);
-  margin-left: 15px;
-  transition: all 0.3s;
-}
-
-.navbar.scrolled .brand-text {
-  font-size: 1.2rem;
-}
-
+/* Navbar Links */
 .navbar-light .navbar-nav .nav-link {
-  color: #333 !important;
+  color: var(--text-primary) !important;
   font-weight: 500;
   padding: 8px 15px;
   border-radius: 4px;
@@ -248,7 +144,7 @@ a:hover, a:focus {
   background-image: url('img/AdobeStock_837392130.jpeg');
   background-size: cover;
   background-position: center;
-  color: white;
+  color: var(--white);
   padding: 0;
   margin-top: 0;
 }
@@ -286,7 +182,88 @@ a:hover, a:focus {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  color: var(--white);
+}
+
+/* Banner Section Styling */
+.banner-section {
+  position: relative;
+  background-color: var(--black);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+  color: var(--hpe-green);
+}
+
+.banner-lead, .banner-text {
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--white);
+}
+
+.banner-lead {
+  font-size: 1.25rem;
+  max-width: 800px;
+}
+
+.banner-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 900px;
+}
+
+/* Buttons */
+.btn-primary, .btn-success {
+  background-color: var(--hpe-green) !important;
+  border-color: var(--hpe-green) !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+  background-color: var(--hpe-green-dark) !important;
+  border-color: var(--hpe-green-dark) !important;
+}
+
+.btn-outline-primary, .btn-outline-success {
+  color: var(--hpe-green) !important;
+  border-color: var(--hpe-green) !important;
+}
+
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active,
+.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active {
+  background-color: var(--hpe-green) !important;
+  color: var(--white) !important;
+}
+
+.btn:focus, .btn.focus {
+  box-shadow: 0 0 0 0.25rem rgba(1, 169, 130, 0.25) !important;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: var(--hpe-green);
+  font-weight: 600;
+}
+
+/* Alerts */
+.alert-info {
+  background-color: rgba(1, 169, 130, 0.05);
+  border-color: rgba(1, 169, 130, 0.2);
+  color: var(--hpe-green-dark);
 }
 
 /* Media Queries */
@@ -318,7 +295,7 @@ a:hover, a:focus {
   }
   
   .navbar-collapse {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 0 0 8px 8px;
     padding: 15px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -387,11 +364,6 @@ a:hover, a:focus {
     font-size: 0.9rem;
   }
   
-  /* Sections */
-  section {
-    padding: 40px 0;
-  }
-  
   /* Header Section */
   .header-section .container {
     padding: 0 2.5%;
@@ -417,8 +389,4 @@ a:hover, a:focus {
   .banner-text {
     font-size: 1rem;
   }
-}
-
-.text-hpe-green {
-  color: #01A982 !important;
 }
